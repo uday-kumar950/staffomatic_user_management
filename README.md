@@ -117,7 +117,7 @@ $ curl --header \
 ```
 
 ### Archive/Unarchive/delete User
-##### (GET /users/archive)
+##### (POST /users/archive)
 
 ```bash
 $ curl --request POST --header \
