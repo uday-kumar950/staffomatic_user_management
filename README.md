@@ -115,3 +115,35 @@ $ curl --header \
         --header "Content-Type: application/json" \
         http://localhost:3189/users
 ```
+
+### Archive/Unarchive/delete User
+##### (GET /users/archive)
+
+```bash
+$ curl --request POST --header \
+        "Authentication: Bearer JWT_TOKEN" \
+        --header "Content-Type: application/json" \
+        http://localhost:3189/users/archive --data \
+        '{"user": {"id": "4"}, "type": "archive"}'
+```
+
+### List Archive/Unarchive Users
+##### (GET /users/deleted_list)
+
+```bash
+$ curl --header \
+        "Authentication: Bearer JWT_TOKEN" \
+        --header "Content-Type: application/json" \
+        http://localhost:3189/users/deleted_list --data \
+        '{"type": "archive"}'
+```
+
+### Track Users Log
+##### (GET /users/track_logs)
+
+```bash
+$ curl --header \
+        "Authentication: Bearer JWT_TOKEN" \
+        --header "Content-Type: application/json" \
+        http://localhost:3189/users/track_logs
+```
