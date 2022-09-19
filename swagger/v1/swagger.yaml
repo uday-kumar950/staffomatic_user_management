@@ -1,0 +1,35 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/users/deleted_list":
+    get:
+      summary: deleted_list user
+      responses:
+        '200':
+          description: successful
+  "/users/track_logs":
+    get:
+      summary: track_logs user
+      responses:
+        '200':
+          description: successful
+  "/users":
+    get:
+      summary: list users
+      responses:
+        '200':
+          description: successful
+  "/users/archive":
+    post:
+      summary: archive user
+      responses:
+        '200':
+          description: successful
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: http://0.0.0.0:3189
