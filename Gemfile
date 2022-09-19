@@ -21,12 +21,14 @@ gem 'jwt'
 
 # seriaization & json_api logic
 gem 'jsonapi.rb'
-
+gem "paranoia"
+gem 'paper_trail'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 4.0.2'
+  gem 'mailcatcher'
 end
 
 group :development do
@@ -37,3 +39,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'actionview-encoded_mail_to'
+gem 'sidekiq'
+#gem 'redis-rails'
+gem 'notifications'
+gem 'rswag'
+

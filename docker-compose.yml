@@ -5,7 +5,7 @@ services:
     image: mysql:5.6.47
     restart: always
     ports:
-      - 3306:3306
+      - 3305:3305
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     volumes:

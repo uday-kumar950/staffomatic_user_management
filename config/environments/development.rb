@@ -63,6 +63,14 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = { :address => "localhost", :port => 80 }
+  config.action_mailer.default_url_options = {:host => "localhost", :port => '3189', :protocol => "http"}
+  config.action_mailer.preview_path = "#{Rails.root}/tmp/mailers/previews"
+  #config.cache_store = :redis_store, 'redis://localhost:6379/'
+  config.active_record.cache_versioning = false
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 end
